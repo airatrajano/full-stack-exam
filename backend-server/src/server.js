@@ -109,7 +109,7 @@ app.get('/api/product-types', (req, res) => {
 
 app.post('/api/product', (req, res) =>{
     const { type, name, id, price } = req.body;
-    const newRow = `\n${type},${name},${id},${price}`;
+    const newRow = `${type},${name},${id},${price}\n`;
     const filePath = path.join(__dirname, 'products.csv');
     fs.appendFile(filePath, newRow, (err) => {
         if (err) {
