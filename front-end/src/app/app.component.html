@@ -1,0 +1,17 @@
+<div>
+  <input type="text" id="inputProduct">
+  
+  <button (click)="getAllProducts()">All Products</button>
+  <button (click)="getProductById(inputProduct)">Product Details</button>
+  <button (click)="getProductType()">Product Types</button>
+  <button> Add Product</button>
+  <button> Delete Product</button>
+
+  <h1>Output:</h1>
+  <div>
+    <div *ngFor="let product of products">
+      <p>{{product.id}} - {{product.type}}, {{product.name}}, {{product.price}}</p>
+    </div>
+  </div>
+
+</div>
